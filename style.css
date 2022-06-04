@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --almostWhite: hsl(0, 0%, 98%);
+  --mediumGray: hsl(0, 0%, 41%);
+  --almostBlack: hsl(0, 0%, 8%);
+  --fontFamily: "Kumbh Sans", sans-serif;
+}
+html {
+  font-family: var(--fontFamily);
+  background-color: var(--almostWhite);
+}
+
+header {
+  margin: 1rem;
+  display: flex;
+  position: relative;
+}
+.logo {
+  height: 100%;
+  margin: 1rem 0;
+}
+/* Menu section  */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+nav > * {
+  margin-inline: 0.5rem;
+}
+nav .menu-Principal {
+  display: flex;
+}
+nav .menu-Principal li,
+.CTA-container > * {
+  margin-inline: 2.5rem;
+}
+.Dropdown-Icon.rotate {
+  transform: rotate(180deg);
+  transition: 0.2s linear;
+}
+
+li {
+  list-style: none;
+  margin: 1rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--mediumGray);
+}
+li:hover {
+  color: var(--almostBlack);
+}
+.Icon-Menu {
+  display: none;
+}
+/* utilities  */
+.btn {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 0.2rem solid var(--almostBlack);
+  cursor: pointer;
+}
+
+/* dropdown section  */
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  width: min-content;
+  top: 90%;
+  box-shadow: 0px 0px 60px -7px rgba(105, 105, 105, 0.35);
+  -webkit-box-shadow: 0px 0px 60px -7px rgba(105, 105, 105, 0.35);
+  -moz-box-shadow: 0px 0px 60px -7px rgba(105, 105, 105, 0.35);
+  border-radius: 0.5rem;
+  z-index: 2;
+}
+.dropdown-list ul li {
+  width: max-content;
+  margin: 1.5rem;
+}
+li img,
+.dropdown-item img {
+  padding-inline: 0.5rem;
+}
+.dropdown-list.show {
+  display: block;
+}
+
+/* Login section  */
+.CTA-container {
+  position: absolute;
+  right: 0;
+}
+/* Background */
+.background {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--almostBlack);
+  opacity: 0.7;
+  width: 100vw;
+}
+/* Hero section  */
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5rem;
+  z-index: 1;
+}
+.container-flex > * {
+  width: 100%;
+  margin: 1.5rem;
+}
+.HeroTitle {
+  font-size: 5em;
+  margin: 2rem 0;
+}
+.HeroParagraph {
+  font-size: 1.5rem;
+  color: var(--mediumGray);
+}
+.HeroImg {
+  width: 100%;
+}
+.HeroCTABtn {
+  color: #fff;
+  background-color: var(--almostBlack);
+}
+.HeroCTABtn:hover {
+  color: var(--almostBlack);
+  background-color: var(--almostWhite);
+  transition: 0.2s linear;
+}
+.BrandSponsors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .nav,
+  .CTA-container {
+    display: none !important;
+  }
+  .nav.active,
+  .CTA-container.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* z-index: 2; */
+  }
+  .background.active {
+    display: block;
+  }
+  .Icon-Menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin: 1rem 0;
+  }
+  .container-flex {
+    flex-direction: column;
+    margin: 1rem;
+    text-align: center;
+  }
+  .container-flex > div:nth-child(1) {
+    order: 2;
+  }
+  .container-flex > div:nth-child(2) {
+    order: 1;
+  }
+  .HeroTitle {
+    font-size: 2rem;
+  }
+  .HeroParagraph {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
