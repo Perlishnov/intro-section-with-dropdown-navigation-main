@@ -67,6 +67,15 @@ li:hover {
   margin: 1rem 0;
   border: 0.2rem solid var(--almostBlack);
   cursor: pointer;
+  color: var(--almostBlack);
+  text-decoration: none;
+}
+.link-login {
+  text-decoration: none;
+  color: var(--almostBlack);
+}
+.link-login:hover {
+  color: #000;
 }
 
 /* dropdown section  */
